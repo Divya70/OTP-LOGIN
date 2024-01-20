@@ -1,11 +1,15 @@
 import "./App.css";
+import PhoneOtpForm from "./components/PhoneOtpForm";
 
 function App() {
   return (
     <>
-      <div>Hello</div>
+      <div className="App">
+        <h1>Login With Phone</h1>
+        <PhoneOtpForm />
+      </div>
     </>
-  );
+  )
 }
 
 export default App;
