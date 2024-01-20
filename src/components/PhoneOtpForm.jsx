@@ -1,4 +1,5 @@
 import { useState } from "react";
+import OtpInput from "./OtpInput";
 
 const PhoneOtpForm = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -16,6 +17,9 @@ const PhoneOtpForm = () => {
     }
     setShowOtpInput(true);
   };
+  const onOtpSubmit=(otp)=>{
+    console.log("Login Successful", otp)
+  }
   return (
     <div>
       {!showOtpInput ? (
@@ -31,6 +35,7 @@ const PhoneOtpForm = () => {
       ) : (
         <div>
           <p>Enter OTP sent to this {phoneNumber}</p>
+          <OtpInput length={4} onOtpSubmit={onOtpSubmit}/>
         </div>
       )}
     </div>
